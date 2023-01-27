@@ -56,18 +56,18 @@ const name = 'Matthew'//declares global
 // 	}, 1000)//This will print out all as 10, not 0-9 as above due to use of var
 // }
 
-for(let i = 0; i < 10; i++){
-	console.log(i)//will not leak the value of i to the global so i = 10 - runs immediately
-	setTimeout(function(){
-		console.log('The number is ' + i)
-	}, 1000)//This will print out 0-9 as above
-}
-for(var i = 0; i < 10; i++){
-	console.log(i)//will leak the value of i to the global so i = 10 - runs immediately
-	setTimeout(function(){
-		console.log('The number is ' + i)
-	}, 1000)//This will print out all as 10, not 0-9 as above due to use of var
-}
+// for(let i = 0; i < 10; i++){
+// 	console.log(i)//will not leak the value of i to the global so i = 10 - runs immediately
+// 	setTimeout(function(){
+// 		console.log('The number is ' + i)
+// 	}, 1000)//This will print out 0-9 as above
+// }
+// for(var i = 0; i < 10; i++){
+// 	console.log(i)//will leak the value of i to the global so i = 10 - runs immediately
+// 	setTimeout(function(){
+// 		console.log('The number is ' + i)
+// 	}, 1000)//This will print out all as 10, not 0-9 as above due to use of var
+// }
 //console.log(pizza)
 //var pizza = 'Deep Dish 🍕🍕'//var can be accessed BEFORE it is declared - undefined - temporal dead zone!
 let pizza = 'Deep Dish 🍕🍕'// const or let will error
@@ -109,3 +109,6 @@ const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos']
 
 const win = winners.map((winner, i) => ({ name: winner, race: race, place: i +1}))//can also just use race instead of race: race for the object you return.  For arrow function to return the object you have to wrap in parens so that it does not look at it as a function block
 
+const ages = [23,34,54,22,33,55,67,99,1,3]
+const old = ages.filter(age => age >= 60)
+console.log(old)
