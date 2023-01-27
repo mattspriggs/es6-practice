@@ -49,12 +49,12 @@ const name = 'Matthew'//declares global
 	const name = 'Matthew'//declares it within the block
 }
 
-for(var i = 0; i < 10; i++){
-	console.log(i)//will leak the value of i to the global so i = 10 - runs immediately
-	setTimeout(function(){
-		console.log('The number is ' + i)
-	}, 1000)//This will print out all as 10, not 0-9 as above due to use of var
-}
+// for(var i = 0; i < 10; i++){
+// 	console.log(i)//will leak the value of i to the global so i = 10 - runs immediately
+// 	setTimeout(function(){
+// 		console.log('The number is ' + i)
+// 	}, 1000)//This will print out all as 10, not 0-9 as above due to use of var
+// }
 
 for(let i = 0; i < 10; i++){
 	console.log(i)//will not leak the value of i to the global so i = 10 - runs immediately
@@ -62,3 +62,13 @@ for(let i = 0; i < 10; i++){
 		console.log('The number is ' + i)
 	}, 1000)//This will print out 0-9 as above
 }
+for(var i = 0; i < 10; i++){
+	console.log(i)//will leak the value of i to the global so i = 10 - runs immediately
+	setTimeout(function(){
+		console.log('The number is ' + i)
+	}, 1000)//This will print out all as 10, not 0-9 as above due to use of var
+}
+console.log(pizza)
+//var pizza = 'Deep Dish 🍕🍕'//var can be accessed BEFORE it is declared - undefined - temporal dead zone!
+let pizza = 'Deep Dish 🍕🍕'// const or let will error
+//console.log(pizza)
