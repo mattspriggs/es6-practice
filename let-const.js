@@ -68,7 +68,39 @@ for(var i = 0; i < 10; i++){
 		console.log('The number is ' + i)
 	}, 1000)//This will print out all as 10, not 0-9 as above due to use of var
 }
-console.log(pizza)
+//console.log(pizza)
 //var pizza = 'Deep Dish 🍕🍕'//var can be accessed BEFORE it is declared - undefined - temporal dead zone!
 let pizza = 'Deep Dish 🍕🍕'// const or let will error
 //console.log(pizza)
+
+const names = ['wes', 'kait', 'lux']
+
+//pre-ES-6 method to add to each item in the array
+const fullNames = names.map(function(name){
+	return `${name} bos`
+})
+
+console.log(fullNames)
+
+const fullNames2 = names.map(name =>{//use (name, i) if you have more than one parameter for arrow functions - can also use (name) or name for single parameter functions
+	return `${name} bos`
+})
+
+console.log(fullNames2)
+const fullNames3 = names.map((name) =>{//use (name, i) if you have more than one parameter for arrow functions - can also use (name) or name for single parameter functions
+	return `${name} bos`
+})
+console.log(fullNames3)
+
+const fullNames4 = names.map(name =>`${name} bos`)
+console.log(fullNames4)
+
+const fullNames5 = names.map(() =>`cool bos`)//fpr arrow functions with no parameters you pass the empty parentheses
+console.log(fullNames5)
+
+//Arrow functions cannot be named but can be placed in a variable - stack traces will not be great
+
+const sayMyName = (name) => {alert(`Hello ${name}!😒`)}
+
+sayMyName('Matt')
+
