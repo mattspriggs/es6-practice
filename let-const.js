@@ -104,3 +104,8 @@ const sayMyName = (name) => {alert(`Hello ${name}!😒`)}
 
 sayMyName('Matt')
 
+const race = '100m Dash'
+const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos']
+
+const win = winners.map((winner, i) => ({ name: winner, race: race, place: i +1}))//can also just use race instead of race: race for the object you return.  For arrow function to return the object you have to wrap in parens so that it does not look at it as a function block
+
