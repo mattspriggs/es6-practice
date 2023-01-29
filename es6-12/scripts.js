@@ -118,5 +118,5 @@ const sentence3 = addAbbreviations`Hello my name is ${first} ${last} and I love 
 
 const bio = document.querySelector('.bio')
 const ptag = document.createElement('p')
-ptag.innerHTML = sentence3
 bio.appendChild(ptag)
+ptag.innerHTML = sentence3
