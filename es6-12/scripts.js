@@ -106,7 +106,9 @@ function addAbbreviations(strings, ...values){
 		}
 		return value
 	})
-	console.log(abbreviated)
+	return strings.reduce((sentence3, string, i) => {
+		return `${sentence3}${string}${abbreviated[i] || ''}`
+	},'')
 }
 
 const first = 'Matt'
@@ -114,4 +116,7 @@ const last = 'Spriggs'
 
 const sentence3 = addAbbreviations`Hello my name is ${first} ${last} and I love to code in ${'HTML'}, ${'CSS'} and ${'JS'}`
 
-const bio = document
+const bio = document.querySelector('.bio')
+const ptag = document.createElement('p')
+ptag.innerHTML = sentence3
+bio.appendChild(ptag)
