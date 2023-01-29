@@ -74,3 +74,44 @@ const markup4 = `
 	</div>
 `
 document.body.innerHTML = markup4
+
+function highlight(strings, ...values){
+	let str = ''
+	strings.forEach((string, i) =>{
+		str += string + (values[i] || '')
+		str += `${string} <span contenteditable="true" class="hl">${values[i] || ''}</span>`
+	})
+	return str
+}
+
+const name2 = 'Sponge'
+const age2 = 100
+const gender = 'male'
+const sentence2 = highlight`My dog's name is ${name2} and he is ${age2} years old ${gender}`
+
+console.log(sentence2)
+
+document.body.innerHTML = sentence2
+
+const dict = {
+	HTML: 'Hyper Text Markup Language',
+	CSS: 'Cascading Style Sheets',
+	JS: 'JavaScript'
+}
+
+function addAbbreviations(strings, ...values){
+	const abbreviated = values.map(value => {
+		if(dict[value]){
+			return `<abbr title="${dict[value]}">${value}</abbr>`
+		}
+		return value
+	})
+	console.log(abbreviated)
+}
+
+const first = 'Matt'
+const last = 'Spriggs'
+
+const sentence3 = addAbbreviations`Hello my name is ${first} ${last} and I love to code in ${'HTML'}, ${'CSS'} and ${'JS'}`
+
+const bio = document
