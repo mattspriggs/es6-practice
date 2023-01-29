@@ -36,3 +36,41 @@ const markup2 = `
 `
 document.body.innerHTML = markup2
 
+const song = {
+	name: 'Dying to live',
+	artist: 'Tupac',
+	featuring: 'Biggie Smalls'
+}
+
+const markup3  = `
+	<div class="song">
+		<p>
+		${song.name} - ${song.artist}
+		${song.featuring ? ` (Featuring ${song.featuring})` : ''}
+		</p>
+	</div>
+`
+document.body.innerHTML = markup3
+
+const beer = {
+	name: 'Belgian Wit',
+	brewery: 'Steam Whistle Brewery',
+	keywords: ['pale', 'cloudy', 'spiced', 'crisp']
+}
+
+function renderKeyWords(keywords){
+	return `
+	<ul>
+		${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+	</ul>
+	`//.join('') will return without the comma after each item
+}
+
+const markup4 = `
+	<div class="beer">
+		<h2>${beer.name}</h2>
+		<p class="brewery">${beer.brewery}</p>
+		${renderKeyWords(beer.keywords)}
+	</div>
+`
+document.body.innerHTML = markup4
