@@ -28,3 +28,31 @@ console.log(leftPad(colour))
 
 console.log(`${'💃'}`.repeat(10))
 console.log(`${'💃' * 5}`.repeat(10) + ' Batman!!!')
+
+const person ={
+	first: 'Matt',
+	last: 'Spriggs',
+	country: 'New Zealand',
+	twitter: '@MattCSpriggs'
+}
+
+//destructuring allows us to extract data from objects and arrays
+// const first = person.first
+// const last = person.last
+
+const { first, last, twitter} = person//this is the same as the above declared variables
+console.log(`${first} ${last} can be found on Twitter ${twitter}`)
+
+const matt ={
+	first: 'Matt',
+	last: 'Spriggs',
+	links:{
+		twitter: '@MattCSpriggs',
+		facebook: 'https://www.facebook.com/matt.c.spriggs/'
+	},
+	web: {
+		portfolio: 'https://mattspriggs.com'
+	}
+	country: 'New Zealand',
+
+}
