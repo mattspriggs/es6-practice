@@ -47,12 +47,17 @@ const matt ={
 	first: 'Matt',
 	last: 'Spriggs',
 	links:{
-		twitter: '@MattCSpriggs',
-		facebook: 'https://www.facebook.com/matt.c.spriggs/'
+		social: {
+			twitter2: '@MattCSpriggs',
+			facebook: 'https://www.facebook.com/matt.c.spriggs/'
+		},
 	},
 	web: {
 		portfolio: 'https://mattspriggs.com'
-	}
+	},
 	country: 'New Zealand',
-
 }
+
+const { twitter2, facebook} = matt.links.social
+
+console.log(`Matt can be found on social media at: Twitter: ${twitter2} and Facebook: ${facebook}`)
