@@ -68,3 +68,8 @@ console.log(`Matt can be found on social media at: Twitter: ${tweet} and Faceboo
 const { w: width = 400, h: height = 500 } = { w:800 }
 
 console.log(width, height)
+
+const details = ['Matt Spriggs', 123, 'mattspriggs.com']
+const [name, id, website] = details
+console.log(name, id, website)
+
