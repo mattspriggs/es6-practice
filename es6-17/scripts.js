@@ -48,7 +48,7 @@ const matt ={
 	last: 'Spriggs',
 	links:{
 		social: {
-			twitter2: '@MattCSpriggs',
+			twitter2: 'https://twitter.com/MattCSpriggs',
 			facebook: 'https://www.facebook.com/matt.c.spriggs/'
 		},
 	},
@@ -58,6 +58,13 @@ const matt ={
 	country: 'New Zealand',
 }
 
-const { twitter2, facebook} = matt.links.social
+const { twitter2:tweet, facebook:fb} = matt.links.social//you can also rename the variable by using, for example twitter2:tweet
 
-console.log(`Matt can be found on social media at: Twitter: ${twitter2} and Facebook: ${facebook}`)
+console.log(`Matt can be found on social media at: Twitter: ${tweet} and Facebook: ${fb}`)
+
+//const settings = {width: 300, color: 'black'}
+//const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings
+//Object destructuring with variable renaming and default values
+const { w: width = 400, h: height = 500 } = { w:800 }
+
+console.log(width, height)
