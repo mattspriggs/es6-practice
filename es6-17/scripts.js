@@ -18,3 +18,13 @@ console.log(accountNumber.endsWith('RT', 11))
 console.log(flightNumber.includes('AC'))
 console.log(flightNumber.includes('ac'))//case-sensitive so will be false
 //.repeat()
+function leftPad(str, length = 20){//will make them align to the right with correct padding at 20px
+	return `➡️ ${' '.repeat(length - str.length)}${str}`
+}
+
+console.log(leftPad(make))
+console.log(leftPad(model))
+console.log(leftPad(colour))
+
+console.log(`${'💃'}`.repeat(10))
+console.log(`${'💃' * 5}`.repeat(10) + ' Batman!!!')
