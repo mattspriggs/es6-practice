@@ -73,3 +73,7 @@ const details = ['Matt Spriggs', 123, 'mattspriggs.com']
 const [name, id, website] = details
 console.log(name, id, website)
 
+const data = 'Basketball,Sports,90210,23'
+const [itemName, category, sku, quantity] = data.split(',')
+console.log(itemName, category, sku, quantity)
+
