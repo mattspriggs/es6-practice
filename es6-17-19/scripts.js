@@ -73,7 +73,17 @@ const details = ['Matt Spriggs', 123, 'mattspriggs.com']
 const [name, id, website] = details
 console.log(name, id, website)
 
-const data = 'Basketball,Sports,90210,23'
-const [itemName, category, sku, quantity] = data.split(',')
+const data = 'Basketball,Sports,90210,23,abc, 123,lmnop'
+const [itemName, category, sku, quantity] = data.split(',')//will ignore extraneous data
 console.log(itemName, category, sku, quantity)
 
+const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker']
+
+const [captain, assistant, ...players] = team//using the ... rest operator (like the spread operator) places the rest into an array
+console.log(captain, assistant, players)
+
+let inRing = 'Hulk Hogan'
+let onSide = 'The Rock'
+console.log(inRing, onSide)
+[inRing, onSide] = [onSide, inRing]
+console.log(inRing, onSide)
