@@ -191,3 +191,12 @@ console.log(post)
 //REFACTORED
 const postIndex = posts.findIndex(post => post.code === code)
 console.log(postIndex)
+
+//Array .some() and .every()
+const ages =[32,15,19,12]
+
+//Is there at least one adult in the group? - some
+const adultPresent = ages.some(age => age >= 18)
+console.log(adultPresent)
+
+//Is everyone old enough to drink?
