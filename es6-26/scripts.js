@@ -194,9 +194,13 @@ console.log(postIndex)
 
 //Array .some() and .every()
 const ages =[32,15,19,12]
-
+const youngins = [1,3,5,4,6,2,8]
 //Is there at least one adult in the group? - some
 const adultPresent = ages.some(age => age >= 18)
 console.log(adultPresent)
+const adultPresent2 = youngins.some(age => age >= 18)
+console.log(adultPresent2)
 
 //Is everyone old enough to drink?
+const allOldEnough = ages.every(age => age >=19)
+console.log(allOldEnough)
