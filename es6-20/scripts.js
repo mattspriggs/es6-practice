@@ -51,12 +51,12 @@ const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib']
 // }
 
 //forOf best of all but objects
-for(const cut of cuts){
+for(const [i,cut] of cuts.entries()){
 
 	// if(cut === 'Brisket'){
 	// 	//break//stops the running
 	// 	continue//skips the item
 	// }
-	console.log(cut)
+	console.log(`${cut} is the ${i + 1} item in the list`)
 }
 
