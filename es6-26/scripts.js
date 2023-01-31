@@ -169,8 +169,25 @@ const posts = [
 		"display_src":"https://scontent.cdninstagram.com/hphotos-xpt1/t51.2885-15/e35/11326072_550275398458202_1726754023_n.jpg"
 	}
 ];
-// const code = 'VBgtGQcSf';
-// const post = posts.find(post => post.code === code);
-//
-// const postIndex = posts.findIndex(post => post.code === code);
-// console.log(postIndex);
+
+// const post = posts.find(post =>{
+// 	console.log(post.code)
+// 	if(post.code === '_XpJcrwcSn'){
+// 		return true
+// 	}
+// 	return false
+// })
+//REFACTORED
+const code = '_XpJcrwcSn';
+const post = posts.find(post => post.code === code);
+console.log(post)
+
+// const postIndex = posts.findIndex((post) =>{
+// 	if(post.code === code){
+// 		return true
+// 	}
+// 	return false
+// })
+//REFACTORED
+const postIndex = posts.findIndex(post => post.code === code)
+console.log(postIndex)
