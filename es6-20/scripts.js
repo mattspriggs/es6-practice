@@ -51,12 +51,37 @@ const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib']
 // }
 
 //forOf best of all but objects
-for(const [i,cut] of cuts.entries()){
-
+for(const [i,cut] of cuts.entries()){//.entries will give you and array with index for each item, without it will just give you a value
+//for(const cut of cuts){
 	// if(cut === 'Brisket'){
 	// 	//break//stops the running
 	// 	continue//skips the item
 	// }
+	//console.log(cut)
+//}
 	console.log(`${cut} is the ${i + 1} item in the list`)
 }
 
+function addUpNumbers(){
+	console.log(arguments)//arrayish - list with a length, not a true array
+	let total = 0
+	for(num of arguments){
+		total += num
+	}
+	console.log(total)
+	return total
+}
+addUpNumbers(10,23,43,24,55,63,78,190,82,99)
+addUpNumbers(1,63,78,190,82,99)
+
+const fullName = 'Matt Spriggs'
+for(const char of fullName){
+	console.log(char);
+}
+
+const ps = document.querySelectorAll('p')
+for(const paragraph of ps){
+	paragraph.addEventListener('click', function(){
+		console.log(this.textContent)
+	})
+}
