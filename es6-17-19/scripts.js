@@ -81,9 +81,3 @@ const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker']
 
 const [captain, assistant, ...players] = team//using the ... rest operator (like the spread operator) places the rest into an array
 console.log(captain, assistant, players)
-
-let inRing = 'Hulk Hogan'
-let onSide = 'The Rock'
-console.log(inRing, onSide)
-[inRing, onSide] = [onSide, inRing]
-console.log(inRing, onSide)
