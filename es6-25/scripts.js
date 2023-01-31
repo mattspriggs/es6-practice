@@ -22,3 +22,7 @@ function sumAll(){
 }
 
 sumAll(1,23,242,45,654,378,99,990)
+
+//Array.of()
+const ages = Array.of(12,34,24,55,66,75,47)//Creates an array from whatever you pass it
+console.log(ages)
