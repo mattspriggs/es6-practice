@@ -79,9 +79,31 @@ for(const char of fullName){
 	console.log(char);
 }
 
-const ps = document.querySelectorAll('p')
-for(const paragraph of ps){
-	paragraph.addEventListener('click', function(){
-		console.log(this.textContent)
-	})
+// const ps = document.querySelectorAll('p')
+// for(const paragraph of ps){
+// 	paragraph.addEventListener('click', function(){
+// 		console.log(this.textContent)
+// 	})
+// }
+
+//For Of with Objects
+const apple = {
+	color: 'Red',
+	size: 'Medium',
+	weight: 50,
+	sugar: 10
+}
+
+// for (const pro of apple.entries()){//.entries() is not working for objects as iterables, so for of is not viable
+// 	console.log(pro)
+// }
+
+for (const prop of Object.keys(apple)){
+	const value = apple[prop]
+	console.log(value, prop)
+}
+
+for(const property in apple){
+	const value = apple[property]
+	console.log(value, property)
 }
