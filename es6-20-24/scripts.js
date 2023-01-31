@@ -107,3 +107,5 @@ for(const property in apple){
 	const value = apple[property]
 	console.log(value, property)
 }
+
+//Array.from() and Array.of()
