@@ -53,9 +53,10 @@ const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib']
 //forOf best of all but objects
 for(const cut of cuts){
 
-	if(cut === 'Brisket'){
-		//break//stops the running
-		continue//skips the item
-	}
+	// if(cut === 'Brisket'){
+	// 	//break//stops the running
+	// 	continue//skips the item
+	// }
 	console.log(cut)
 }
+
