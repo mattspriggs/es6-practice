@@ -30,3 +30,32 @@ const bill2 = tipCalc({tip: 0.2, total: 200 })
 const bill3 = tipCalc({ })
 
 console.log(bill, bill2, bill3)
+
+// function tipCalc({total = 100, tip = 0.15, tax = 0.13} = { }){
+// 	return total + (tip * total) + (tax * total) //will run with no arguments passed - tipCalc()
+
+//forOf loops works over any iterable - anything you can loop over
+
+const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib']
+// for(let i = 0; i < cuts.length; i++){
+// 	console.log(cuts[i])
+// }
+
+// cuts.forEach((cut) =>{
+// 	console.log(cut)//if(cut === 'Brisket'){continue} will not work
+//
+// })//unskippable and unstoppable
+
+// for (const index in cuts){
+// 	console.log(cuts[index])//will also iterate over anything added to the prototype
+// }
+
+//forOf best of all but objects
+for(const cut of cuts){
+
+	if(cut === 'Brisket'){
+		//break//stops the running
+		continue//skips the item
+	}
+	console.log(cut)
+}
