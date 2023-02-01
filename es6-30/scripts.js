@@ -30,3 +30,4 @@ const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commen
 console.log(newComments)
 // const newComments2 = [comments.splice(0,commentIndex), comments.splice(commentIndex + 1)]
 // console.log(newComments2)
+this.setState({ comments: newComments })
