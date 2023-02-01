@@ -5,3 +5,9 @@ const newInventors = ['Musk', 'Jobs']
 
 inventors.push(...newInventors)
 console.log(inventors)
+
+const name = ['Matt', 'Spriggs']
+function sayHi(first, last){
+	alert(`Hey ther ${first} ${last}`)
+}
+sayHi(...name)
