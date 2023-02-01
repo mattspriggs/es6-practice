@@ -11,3 +11,7 @@ console.log(amounts)
 const runner = ['Matt Spriggs', 123,5.6,6.7, 7,10,9,8,9.5]
 const [name, id, ...runs] = runner
 console.log(name, id, runs)
+
+const team = ['Matt', 'Wes', 'Billy', 'John', 'Fred', 'Joe', 'Sanjay']
+const [captain, assistant, ...players] = team
+console.log(captain, assistant, players)
