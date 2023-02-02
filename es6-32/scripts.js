@@ -17,3 +17,27 @@ const [captain, assistant, ...players] = team
 console.log(captain, assistant, players)
 
 //Object Literals
+const first = 'snickers'
+const last = 'bos'
+const age = 2
+const breed = 'King Charles Cav'
+
+const dog = {//when the key and the variable of the object are the same you can just type it once
+	firstName: first,
+	last,
+	age,
+	breed,
+	pals: ['Hugo', 'Sunny']
+}
+
+const modal = {
+	create:{
+
+	},
+	open:{
+
+	},
+	close:{
+
+	},
+}
