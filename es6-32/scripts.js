@@ -30,14 +30,41 @@ const dog = {//when the key and the variable of the object are the same you can 
 	pals: ['Hugo', 'Sunny']
 }
 
-const modal = {
-	create:{
+// const modal = {
+// 	create: function(){
+//
+// 	},
+// 	open: function(){
+//
+// 	},
+// 	close: function(){
+//
+// 	},
+// }
+//Shorthand for the above use of functions in a modal
+const modal= {
+	create(selector){
 
 	},
-	open:{
+	open(content){
 
 	},
-	close:{
+	close(goodbye){
 
 	},
 }
+
+//Computed property names
+function invertColor(color){
+	return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6)
+}//provides the opposite color
+
+const key = 'pocketColor'
+const value = '#ffc600'
+
+const tShirt = {
+	[key]: value,
+	[`${key}Opposite`]: invertColor(value)
+}
+
+console.log(tShirt)
