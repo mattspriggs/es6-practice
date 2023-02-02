@@ -15,3 +15,5 @@ console.log(name, id, runs)
 const team = ['Matt', 'Wes', 'Billy', 'John', 'Fred', 'Joe', 'Sanjay']
 const [captain, assistant, ...players] = team
 console.log(captain, assistant, players)
+
+//Object Literals
