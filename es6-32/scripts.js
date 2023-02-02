@@ -68,3 +68,15 @@ const tShirt = {
 }
 
 console.log(tShirt)
+
+//For awkward info from an API
+const keys = ['size', 'color', 'weight']
+const values = ['medium', 'red', 100]
+
+const shirt = {
+	[keys.shift()]: values.shift(),
+	[keys.shift()]: values.shift(),
+	[keys.shift()]: values.shift()
+}
+
+console.log(shirt)
