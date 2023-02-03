@@ -23,3 +23,22 @@ p
 	.catch(err =>{
 		console.error(err)
 	})
+
+//simulation of a database access
+const posts = [
+	{title: 'I love JavaScript', author: 'Wes Bos', id: 1},
+	{title: 'CSS', author: 'Chris Coyier', id: 2},
+	{title: 'Dev tools trickst', author: 'Addy Osmani', id: 3}
+]
+
+const authors = [
+	{name: 'Wes Bos', twitter: '@wesbos', bio: 'Canadian Developer'},
+	{name: 'Chris Coyier', twitter: '@chriscoyier', bio: 'CSS Tricks and CodePen'},
+	{name: 'Addy Osmani', twitter: '@addyosmani', bio: 'Googler'}
+]
+
+function getPostById(id){
+
+}
+
+getPostById(2)
