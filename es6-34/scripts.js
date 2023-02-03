@@ -38,7 +38,19 @@ const authors = [
 ]
 
 function getPostById(id){
-
+	//Create a new promise
+	return new Promise((resolve, reject) => {
+		//use setTimeout to mimic a DB
+		setTimeout(() => {
+			//find the post we want
+			const post = posts.find(post => post.id === id)
+			if(post){
+				resolve(post)//send the post we want to the promise as data
+			} else {
+				reject(Error('No post was found!'))
+			}
+		}, 2000)
+	})
 }
 
 getPostById(2)
