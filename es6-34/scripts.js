@@ -109,3 +109,21 @@ Promise
 	.then(responses =>{
 		console.log(responses)//Shows the data from the responses
 	})
+//Symbols - 7th primitive type (object, string, boolean, number, null, undefined)
+const matt = Symbol('Matt')//unique identifier to prevent naming collisions - will never be overwritten
+const person = Symbol('Matt')
+const classRoom ={
+	[Symbol('Mark')]:{grade: 50, gender: 'male'},
+	[Symbol('Olivia')]:{grade: 80, gender: 'female'},
+	[Symbol('Olivia')]:{grade: 80, gender: 'female'}
+}
+//Symbols are not iterable
+for(student in classRoom){
+	console.log(student)//will not be looped over - can be useful for private data that you never want to have looped
+	// over
+}
+
+const syms = Object.getOwnPropertySymbols(classRoom)
+const data = syms.map(sym => classRoom[sym])
+console.log(data)
+
