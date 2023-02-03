@@ -10,8 +10,8 @@ postsPromise
 
 const p = new Promise((resolve, reject) =>{
 	setTimeout(() =>{
-	// resolve('Matt is cool')
-		reject(Error('Err Matt isn\'t cool'))
+		resolve('Matt is cool')
+		// reject(Error('Err Matt isn\'t cool'))
 	},2000)
 
 })
@@ -28,7 +28,7 @@ p
 const posts = [
 	{title: 'I love JavaScript', author: 'Wes Bos', id: 1},
 	{title: 'CSS', author: 'Chris Coyier', id: 2},
-	{title: 'Dev tools trickst', author: 'Addy Osmani', id: 3}
+	{title: 'Dev tools tricks and tips', author: 'Addy Osmani', id: 3}
 ]
 
 const authors = [
@@ -54,3 +54,19 @@ function getPostById(id){
 }
 
 getPostById(2)
+	.then(post => {
+		console.log(post)
+		return hydrateAuthor(post)
+	})
+
+function hydrateAuthor(post){
+	return new Promise((resolve, reject) =>{
+		const authorDetails = authors.find(person => person.name === post.name)
+		if(authorDetails){
+			post.author = authorDetails
+			resolve(post)
+		}else{
+			reject(Error('No author found!'))
+		}
+	})
+}
