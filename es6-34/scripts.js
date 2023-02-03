@@ -53,20 +53,30 @@ function getPostById(id){
 	})
 }
 
-getPostById(2)
+getPostById(5)
 	.then(post => {
 		console.log(post)
 		return hydrateAuthor(post)
 	})
+	.then(post =>{
+		console.log(post)
+	})
+	.catch(err =>{
+		console.log(err)
+	})
 
 function hydrateAuthor(post){
+	//create a new promise
 	return new Promise((resolve, reject) =>{
-		const authorDetails = authors.find(person => person.name === post.name)
+		//find the author
+		const authorDetails = authors.find(person => person.name === post.author)
 		if(authorDetails){
+			//"hydrate" the post object with the author object
 			post.author = authorDetails
-			resolve(post)
+			resolve(post)//pass the author back to the promise once found
 		}else{
 			reject(Error('No author found!'))
 		}
 	})
 }
+
