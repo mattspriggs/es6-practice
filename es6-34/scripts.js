@@ -94,6 +94,18 @@ const tweets = new Promise((resolve) =>{
 Promise
 	.all([weather, tweets])//all have to resolve or reject to return
 	.then(responses =>{
-		const [weather, tweets] = responses
-		console.log(weather,tweets)
+		const [weatherInfo, tweetInfo] = responses
+		console.log(weatherInfo, tweetInfo)
+	})
+
+const baconPromise = fetch('https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1')
+const streetCarsPromise = fetch('https://data.ratp.fr/api/datasets/1.0/search/?q=paris')
+
+Promise
+	.all([baconPromise,streetCarsPromise])//Waits for both promises to come back
+	.then(responses => {
+		return Promise.all(responses.map(res => res.json()))//takes the stream response and puts the data into JSON
+	})
+	.then(responses =>{
+		console.log(responses)//Shows the data from the responses
 	})
